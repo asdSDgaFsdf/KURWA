@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulasz</title>
+</head>
+<body>
+    <h1 id="wynik"> Julasz </h1>
+    <button onclick="test()">duzy chuj</button>
+    <br><br>
+    liczba1: <input type="number" id="liczba1">
+    <br>
+    liczba2: <input type="number" id="liczba2">
+    <br>
+    <button onclick="calk(0)">+</button>        
+    <button onclick="calk(1)">-</button>    
+    <button onclick="calk(2)">*</button>    
+    <button onclick="calk(3)">/</button>
+    <br>
+    <p id="dzialanie"></p>
+
+
+    <script>
+        function test() {
+            document.getElementById("wynik").innerText = "dziwki"
+        }
+
+        function calk(znak) {
+            liczba1 = document.getElementById("liczba1").value;
+            liczba2 = document.getElementById("liczba2").value;
+            liczba1 = parseInt(liczba1);
+            liczba2 = parseInt(liczba2);
+
+            suma = 0;
+            if (znak ==0) {
+                suma = liczba1 + liczba2;
+                
+            } else if(znak == 1){
+                suma = liczba1 - liczba2;
+            } else if(znak == 2){
+                suma = liczba1 * liczba2;
+            } else if(znak == 0) {
+            suma = "Nie dzielimy przez zero"
+
+            } else {
+                suma = liczba1 / liczba2;
+            }
+            
+            document.getElementById("dzialanie").innerText = suma;
+        }
+    </script>
+
+</body>
+</html>
